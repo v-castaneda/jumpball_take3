@@ -1,10 +1,11 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function Index ({breads, courts, bakers, players, title})  {
+function Index ({players, courts, title})  {
   return (
     <Default title={title}>
-      <h3>Bakers</h3>
+      {/* <h3>Bakers</h3>
+      {console.log(bakers)}
       <ul>
         {
           bakers.map((baker)=> {
@@ -15,22 +16,37 @@ function Index ({breads, courts, bakers, players, title})  {
             )
           })
         }
-      </ul>
+      </ul> */}
 
       <h3>Players</h3>
-        {/* <ul>
+      {console.log(players)}
+        <ul>
           {
             players.map((player) => {
               return (
-                <li className='nobull' key={player.id}>
+                <li className='nobull' key={player._id}>
                   <a href={`/players/${player._id}`}>{player.name}</a>
                 </li>
               )
             })
           }
-        </ul> */}
+        </ul>
+
+      <h3>Courts</h3>
+      {console.log(courts)}
+        <ul>
+          {
+            courts.map((court) => {
+              return (
+                <li className='nobull' key={court._id}>
+                  <a href={`/courts/${court._id}`}>{court.name}</a>
+                </li>
+              )
+            })
+          }
+        </ul>
   
-      <h3>Breads</h3>
+      {/* <h3>Breads</h3>
         {
           breads.map((bread, index)=> {
             return (
@@ -44,7 +60,7 @@ function Index ({breads, courts, bakers, players, title})  {
         }        
       <div className="newButton">
           <a href="/breads/new"><button>Add a new bread</button></a>
-      </div>
+      </div> */}
 
     </Default>
   )

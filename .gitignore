@@ -105,3 +105,4 @@ dist
 
 # Not sure what these are
 .DS_Store
+package-lock.json

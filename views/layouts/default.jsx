@@ -20,7 +20,7 @@ function Default(html) {
     <body>
       <div className="wrapper">
         <header>
-          <h1><a href="/breads">JumpBall</a></h1>
+          <h1><a href="/players">JumpBall</a></h1>
         </header>
         <div className="container">
           {html.children}

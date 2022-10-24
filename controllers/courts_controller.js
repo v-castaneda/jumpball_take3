@@ -5,9 +5,9 @@ const Player = require('../models/player.js')
 
 // INDEX
 courts.get('/', async (req, res) => {
-    const foundPlayers = await Player.find().lean()
     const foundCourts = await Court.find().lean()
-    console.log(foundCourts)
+    const foundPlayers = await Player.find().lean()
+    // console.log(foundCourts)
     res.render('index', {
         courts: foundCourts, 
         players: foundPlayers,
