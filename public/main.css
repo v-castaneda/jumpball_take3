@@ -1,5 +1,9 @@
 body {
-  background-color: floralwhite;
+  background-color: whitesmoke;
+}
+
+.nobull {
+  list-style-type: none;
 }
 
 img {

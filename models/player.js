@@ -8,10 +8,10 @@ const playerSchema = new Schema({
     name: {
         type: String,
         required: true,
-        enum: ['Me', 'You']
+        enum: ['Jesse', 'Joseph', 'Victor']
     }, 
-    GameDays: {
-        type: String,
+    gameDays: {
+        type: Date,
         required: true
     },
     bio: String
@@ -19,7 +19,7 @@ const playerSchema = new Schema({
 
 // virtuals 
 playerSchema.virtual('courts', {
-    ref: 'Courts',
+    ref: 'Court',
     localField: '_id',
     foreignField: 'player'
 })

@@ -20,7 +20,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 
 // ROUTES
 app.get('/', (req, res) => {
-  res.send('Welcome to an awesome App about Breads')
+  res.send('Time to hoop!')
 })
 
 // Breads
@@ -30,6 +30,10 @@ app.use('/breads', breadsController)
 // Bakers 
 const bakersController = require('./controllers/bakers_controller.js')
 app.use('/bakers', bakersController)
+
+// Players
+// const playersController = require('./controllers/players_controller.js')
+// app.use('/players', playersController)
 
 // 404 Page
 app.get('*', (req, res) => {
