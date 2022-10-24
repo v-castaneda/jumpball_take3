@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function Index ({breads, bakers, title})  {
+function Index ({breads, courts, bakers, players, title})  {
   return (
     <Default title={title}>
       <h3>Bakers</h3>
@@ -16,6 +16,19 @@ function Index ({breads, bakers, title})  {
           })
         }
       </ul>
+
+      <h3>Players</h3>
+        {/* <ul>
+          {
+            players.map((player) => {
+              return (
+                <li className='nobull' key={player.id}>
+                  <a href={`/players/${player._id}`}>{player.name}</a>
+                </li>
+              )
+            })
+          }
+        </ul> */}
   
       <h3>Breads</h3>
         {
@@ -32,13 +45,6 @@ function Index ({breads, bakers, title})  {
       <div className="newButton">
           <a href="/breads/new"><button>Add a new bread</button></a>
       </div>
-
-      <h3>Players</h3>
-      <ul className='nobull'>
-        {
-          
-        }
-      </ul>
 
     </Default>
   )

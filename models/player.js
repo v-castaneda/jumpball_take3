@@ -1,6 +1,6 @@
 // dependencies
 const mongoose = require('mongoose')
-const Courts = require('./courts')
+const Courts = require('./court')
 const { Schema } = mongoose
 
 // schema
