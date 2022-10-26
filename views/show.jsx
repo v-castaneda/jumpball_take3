@@ -14,11 +14,11 @@ function Show ({court}) {
         {/* TODO: Need to fix the getBlessedBy() helper method in court.js */}
         {/* <p>{court.getBlessedBy()}</p> */}
         <a href={`/court/${court.id}/edit`}><button>Edit</button></a>
-        <form action={`/court/${court.id}?_method=DELETE`} method="POST">
+        {/* Will leave bottom commented out. Don't think we want users deleting courts */}
+        {/* <form action={`/court/${court.id}?_method=DELETE`} method="POST">
           <input type='submit' value="DELETE"/>
-        </form>
+        </form> */}
 
-        <li className='nobull'><a href="/courts">Go home</a></li>
       </Default>
     )
 }
