@@ -15,6 +15,7 @@ img {
 #nav {
   position: sticky;
   top: 0.5em;
+  background-color: black;
 }
 
 ul {
