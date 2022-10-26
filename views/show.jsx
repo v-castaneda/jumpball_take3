@@ -11,7 +11,8 @@ function Show ({court}) {
           Located at {`${court.address}, ${court.city}`}
         </p>
         <img src={court.image} alt={court.name} />
-        {/* <p>{bread.getBakedBy()}</p> */}
+        {/* TODO: Need to fix the getBlessedBy() helper method in court.js */}
+        {/* <p>{court.getBlessedBy()}</p> */}
         <a href={`/court/${court.id}/edit`}><button>Edit</button></a>
         <form action={`/court/${court.id}?_method=DELETE`} method="POST">
           <input type='submit' value="DELETE"/>

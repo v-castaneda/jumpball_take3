@@ -15,6 +15,11 @@ const courtSchema = new Schema({
     }
 })
 
+// helper methods 
+courtSchema.methods.getBlessedBy = function(){
+  return `${this.player.name} plays with style at ${this.name}.`
+}
+
 // model and export
 const Court = mongoose.model('Court', courtSchema)
 module.exports = Court
