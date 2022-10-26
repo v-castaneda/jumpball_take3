@@ -1,12 +1,12 @@
 const express = require('express')
-const courts = express.Router()
-const Court = require('../models/court.js')
-const Player = require('../models/player.js')
+const courtsRouter = express.Router()
+const CourtModel = require('../models/court.js')
+const PlayerModel = require('../models/player.js')
 
 // INDEX
-courts.get('/', async (req, res) => {
-    const foundCourts = await Court.find().lean()
-    const foundPlayers = await Player.find().lean()
+courtsRouter.get('/', async (req, res) => {
+    const foundCourts = await CourtModel.find().lean()
+    const foundPlayers = await PlayerModel.find().lean()
     // console.log(foundCourts)
     res.render('index', {
         courts: foundCourts, 
@@ -16,8 +16,8 @@ courts.get('/', async (req, res) => {
 })
 
 // NEW
-courts.get('/new', (req, res) => {
-    Player.find()
+courtsRouter.get('/new', (req, res) => {
+    PlayerModel.find()
     .then(foundPlayers => {
         res.render('new', {
             players: foundPlayers
@@ -26,8 +26,8 @@ courts.get('/new', (req, res) => {
 })
 
 // SHOW
-courts.get('/:id', (req, res) => {
-    Court.findById(req.params.id)
+courtsRouter.get('/:id', (req, res) => {
+    CourtModel.findById(req.params.id)
     .populate('player')
     .then(foundCourt => {
         res.render('show', {
@@ -40,8 +40,8 @@ courts.get('/:id', (req, res) => {
 })
 
 // EDIT
-courts.get('/:id/edit', (req, res) => {
-    Player.find()
+courtsRouter.get('/:id/edit', (req, res) => {
+    PlayerModel.find()
     .then(foundPlayers => {
         Court.findById(req.params.id)
         .then(foundCourt => {
@@ -54,13 +54,13 @@ courts.get('/:id/edit', (req, res) => {
 })
 
 // UPDATE
-courts.put('/:id', (req, res) => {
+courtsRouter.put('/:id', (req, res) => {
 //   if(req.body.hasGluten === 'on'){
 //     req.body.hasGluten = true
 //   } else {
 //     req.body.hasGluten = false
 //   }
-  Court.findByIdAndUpdate(req.params.id, req.body, { new: true }) 
+  CourtModel.findByIdAndUpdate(req.params.id, req.body, { new: true }) 
     .then(updatedBread => {
       console.log(updatedBread) 
       res.redirect(`/courts/${req.params.id}`) 
@@ -68,7 +68,7 @@ courts.put('/:id', (req, res) => {
 })
 
 // CREATE
-courts.post('/', (req, res) => {
+courtsRouter.post('/', (req, res) => {
   if(!req.body.image) {
       req.body.image = undefined 
   }
@@ -77,16 +77,16 @@ courts.post('/', (req, res) => {
 //   } else {
 //     req.body.hasGluten = false
 //   }
-  Court.create(req.body)
+  CourtModel.create(req.body)
   res.redirect('/courts')
 })
 
 // DELETE
-courts.delete('/:id', (req, res) => {
-    Court.findByIdAndDelete(req.params.id)
+courtsRouter.delete('/:id', (req, res) => {
+    CourtModel.findByIdAndDelete(req.params.id)
         .then(deletedCourt => {
             res.status(303).redirect('/courts')
         })
 })
 
-module.exports = courts
+module.exports = courtsRouter

@@ -23,17 +23,9 @@ app.get('/', (req, res) => {
   res.send('Time to hoop!')
 })
 
-// // Breads
-// const breadsController = require('./controllers/breads_controller.js')
-// app.use('/breads', breadsController)
-
 // Courts
 const courtsController = require('./controllers/courts_controller.js')
 app.use('/courts', courtsController)
-
-// // Bakers 
-// const bakersController = require('./controllers/bakers_controller.js')
-// app.use('/bakers', bakersController)
 
 // Players
 const playersController = require('./controllers/players_controller.js')

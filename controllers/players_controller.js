@@ -1,10 +1,10 @@
 const express = require('express')
-const player = express.Router()
-const Player = require('../models/player.js')
+const playerRouter = express.Router()
+const PlayerModel = require('../models/player.js')
 
 // index 
-player.get('/', (req, res) => {
-    Player.find()
+playerRouter.get('/', (req, res) => {
+    PlayerModel.find()
         .populate('courts')
         .then(foundPlayers => {
             res.send(foundPlayers)
@@ -12,8 +12,8 @@ player.get('/', (req, res) => {
 })
 
 // show 
-player.get('/:id', (req, res) => {
-    Player.findById(req.params.id)
+playerRouter.get('/:id', (req, res) => {
+    PlayerModel.findById(req.params.id)
         .populate({
             path: 'courts',
             options: { limit: 3 }
@@ -27,11 +27,11 @@ player.get('/:id', (req, res) => {
 })
 
 // delete
-player.delete('/:id', (req, res) => {
-    Player.findByIdAndDelete(req.params.id) 
+playerRouter.delete('/:id', (req, res) => {
+    PlayerModel.findByIdAndDelete(req.params.id) 
       .then(deletedPlayer => { 
         res.status(303).redirect('/courts')
       })
   })
 
-module.exports = player
+module.exports = playerRouter
