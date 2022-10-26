@@ -18,22 +18,17 @@ app.use(express.static('public'))
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
-// ROUTES
-app.get('/', (req, res) => {
-  res.send('Time to hoop!')
-})
-
-// Courts
+// COURT ROUTES
 const courtsController = require('./controllers/courts_controller.js')
 app.use('/courts', courtsController)
 
-// Players
+// PLAYERS
 const playersController = require('./controllers/players_controller.js')
 app.use('/players', playersController)
 
 // 404 Page
 app.get('*', (req, res) => {
-  res.send('404')
+  res.send('404 - see server.js')
 })
 
 // LISTEN

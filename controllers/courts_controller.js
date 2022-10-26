@@ -55,11 +55,6 @@ courtsRouter.get('/:id/edit', (req, res) => {
 
 // UPDATE
 courtsRouter.put('/:id', (req, res) => {
-//   if(req.body.hasGluten === 'on'){
-//     req.body.hasGluten = true
-//   } else {
-//     req.body.hasGluten = false
-//   }
   CourtModel.findByIdAndUpdate(req.params.id, req.body, { new: true }) 
     .then(updatedBread => {
       console.log(updatedBread) 
@@ -72,11 +67,6 @@ courtsRouter.post('/', (req, res) => {
   if(!req.body.image) {
       req.body.image = undefined 
   }
-//   if(req.body.hasGluten === 'on') {
-//     req.body.hasGluten = true
-//   } else {
-//     req.body.hasGluten = false
-//   }
   CourtModel.create(req.body)
   res.redirect('/courts')
 })
