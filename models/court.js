@@ -7,7 +7,8 @@ const { Schema } = mongoose
 const courtSchema = new Schema({
     name: { type: String, required: true },
     address: { type: String, required: true},
-    city: { type: String, required: true},
+    city: { type: String, required: true}, 
+    image: { type: String, required: false}, 
     player: {
         type: Schema.Types.ObjectID,
         ref: 'Player'

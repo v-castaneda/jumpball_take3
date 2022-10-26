@@ -10,12 +10,12 @@ function Show ({court}) {
         <p>
           Located at {`${court.address}, ${court.city}`}
         </p>
-        {/* <img src={bread.image} alt={bread.name} />
-        <p>{bread.getBakedBy()}</p>
-        <a href={`/breads/${bread.id}/edit`}><button>Edit</button></a>
-        <form action={`/breads/${bread.id}?_method=DELETE`} method="POST">
+        <img src={court.image} alt={court.name} />
+        {/* <p>{bread.getBakedBy()}</p> */}
+        <a href={`/court/${court.id}/edit`}><button>Edit</button></a>
+        <form action={`/court/${court.id}?_method=DELETE`} method="POST">
           <input type='submit' value="DELETE"/>
-        </form> */}
+        </form>
 
         <li className='nobull'><a href="/courts">Go home</a></li>
       </Default>
