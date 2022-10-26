@@ -1,7 +1,6 @@
 const express = require('express')
 const player = express.Router()
 const Player = require('../models/player.js')
-const playerSeedData = require('../models/player_seed.js')
 
 // index 
 player.get('/', (req, res) => {
@@ -34,10 +33,5 @@ player.delete('/:id', (req, res) => {
         res.status(303).redirect('/courts')
       })
   })
-
-player.get('/data/seed', (req, res) => {
-    Player.insertMany(playerSeedData)
-        .then(res.redirect('/stats'))
-})
 
 module.exports = player

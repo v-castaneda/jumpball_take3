@@ -20,7 +20,14 @@ function Default(html) {
     <body>
       <div className="wrapper">
         <header>
-          <h1><a href="/players">JumpBall</a></h1>
+          <h1>JumpBall</h1>
+          <nav id="sticky-nav">
+            <ul>
+                <li><a href='/'>Home</a></li>
+                <li><a href='/courts'>Courts</a></li>
+                <li><a href='/players'>Players</a></li>
+            </ul>
+        </nav>
         </header>
         <div className="container">
           {html.children}
