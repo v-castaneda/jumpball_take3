@@ -20,12 +20,12 @@ function Default(html) {
     <body>
       <div className="wrapper">
         <header>
-          <h1>JumpBall</h1>
+          <h1>JumpBall Meet Up</h1>
           <nav id="sticky-nav">
             <ul>
-                <li><a href='/'>Home</a></li>
-                <li><a href='/courts'>Courts</a></li>
-                <li><a href='/players'>Players</a></li>
+                <li><a href='/courts'>Home</a></li>
+                <li><a href='/courts/new'>Court+</a></li>
+                <li><a href='/players'>Player+</a></li>
             </ul>
         </nav>
         </header>
