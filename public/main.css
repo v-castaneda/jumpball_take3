@@ -11,3 +11,15 @@ img {
   display: block;
   margin: auto;
 }
+
+#nav {
+  position: sticky;
+  top: 0.5em;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
