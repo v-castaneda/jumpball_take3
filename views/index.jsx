@@ -1,12 +1,13 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function Index ({players, courts, title})  {
+function Index ({courts, players, title})  {
+  // confirm we are getting our courts and players data in terminal
+  // {console.log(players)}
+  // {console.log(courts)}
   return (
     <Default title={title}>
-
       <h3>Players</h3>
-      {console.log(players)}
         <ul>
           {
             players.map((player) => {
@@ -20,7 +21,6 @@ function Index ({players, courts, title})  {
         </ul>
 
       <h3>Courts</h3>
-      {console.log(courts)}
         <ul>
           {
             courts.map((court) => {
@@ -32,9 +32,9 @@ function Index ({players, courts, title})  {
             })
           }
         </ul>
-        
-      {/*<div className="newButton">
-          <a href="/breads/new"><button>Add a new bread</button></a>
+
+      {/* <div className="newButton">
+          <a href="/courts/new"><button>Add a new court</button></a>
       </div> */}
 
     </Default>
