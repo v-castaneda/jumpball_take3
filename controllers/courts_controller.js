@@ -64,6 +64,7 @@ courtsRouter.put('/:id', (req, res) => {
 
 // CREATE
 courtsRouter.post('/', (req, res) => {
+    console.log(req.body)
   if(!req.body.image) {
       req.body.image = undefined 
   }
