@@ -11,6 +11,15 @@ playerRouter.get('/', (req, res) => {
         })
 })
 
+//new
+playerRouter.get('/newPlayer', (req, res) => {
+    PlayerModel.find()
+    .then(foundPlayers => {
+        res.render('newPlayer', {
+            players: foundPlayers
+        })
+    })
+})
 
 // show 
 playerRouter.get('/:id', (req, res) => {
