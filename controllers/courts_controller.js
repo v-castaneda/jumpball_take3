@@ -43,10 +43,10 @@ courtsRouter.get('/:id', (req, res) => {
 courtsRouter.get('/:id/edit', (req, res) => {
     PlayerModel.find()
     .then(foundPlayers => {
-        console.log(foundPlayers)
+        // console.log(foundPlayers)
         CourtModel.findById(req.params.id)
         .then(foundCourt => {
-            console.log(foundCourt)
+            // console.log(foundCourt)
             res.render('edit', {
                 courts: foundCourt,
                 players: foundPlayers
