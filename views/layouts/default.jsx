@@ -22,7 +22,7 @@ function Default(html) {
         <header>
           <h1>JumpBall Meet Up</h1>
           <nav id="nav">
-            <ul>
+            <ul id="navUl">
                 <li><a href='/courts'>Home</a></li>
                 <li><a href='/courts/new'>Court+</a></li>
                 <li><a href='/players'>Player+</a></li>
