@@ -2,11 +2,12 @@ const React = require('react')
 const Default = require('./layouts/Default')
 
 function Edit({ courts, players }) {
-
+  console.log(courts)
   return (
     <Default>
       <h2>Edit</h2>
-      <form action={`/courts/${courts.id}?_method=PUT`} method="POST">
+      <form action={`/courts/${courts._id}?_method=PUT`} method="POST">
+
         <label htmlFor="name">Name</label>
         <input
           type="text"
@@ -34,7 +35,7 @@ function Edit({ courts, players }) {
           type="text"
           name="image"
           id="image"
-          defaultValue={bread.image}
+          defaultValue={courts.image}
         />
         <label htmlFor="player">Player</label>
         <select name="player" id="player" defaultValue={courts.players}>
