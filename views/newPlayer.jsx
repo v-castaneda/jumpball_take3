@@ -1,16 +1,17 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function newPlayer({ players, event }) {
-    state = {
-        value: null,
-        days: [{ day1: 'Monday', day2: 'Tuesday', day3: 'Wednesday', day4: 'Thursday', day5: 'Friday', day6: 'Saturday', day7: 'Sunday' }]
-    }
-    // handleChange(event) {
-    //     this.setState({
-    //         value: Array.from(event.target.selectedOptions, item => item.value)
-    //     });
-    // }
+// function newPlayer({ players, event }) {
+//     state = {
+//         value: null,
+//         days: [{ day1: 'Monday', day2: 'Tuesday', day3: 'Wednesday', day4: 'Thursday', day5: 'Friday', day6: 'Saturday', day7: 'Sunday' }]
+//     }
+//     function handleChange(event) {
+//         this.setState({
+//             value: Array.from(event.target.selectedOptions, item => item.value)
+//         });
+//     }
+function newPlayer(){
     return (
         <Default>
             <h2>Add new player</h2>
@@ -39,16 +40,16 @@ function newPlayer({ players, event }) {
                 </label>
                 <label htmlFor='days'>
                     Days Available
-                    <select
+                    {/* <select
                         multiple
-                        onChange={(e) => console.log()}
+                        onChange={handleChange}
                         value={this.state.value}
                     >
                         {this.state.days.map(days => (
                             <option value={days.pk}>{days.day1}</option>
                         ))}
 
-                    </select>
+                    </select> */}
                 </label>
 
             </form>
