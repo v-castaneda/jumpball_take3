@@ -7,18 +7,6 @@ function Index ({courts, players, title})  {
   // {console.log(courts)}
   return (
     <Default title={title}>
-      <h3>Players</h3>
-        <ul>
-          {
-            players.map((player) => {
-              return (
-                <li className='nobull' key={player._id}>
-                  <a href={`/players/${player._id}`}>{player.name}</a>
-                </li>
-              )
-            })
-          }
-        </ul>
 
       <h3>Courts</h3>
         <ul>
@@ -27,6 +15,19 @@ function Index ({courts, players, title})  {
               return (
                 <li className='nobull' key={court._id}>
                   <a href={`/courts/${court._id}`}>{court.name}</a>
+                </li>
+              )
+            })
+          }
+        </ul>
+        
+      <h3>Players</h3>
+        <ul>
+          {
+            players.map((player) => {
+              return (
+                <li className='nobull' key={player._id}>
+                  <a href={`/players/${player._id}`}>{player.name}</a>
                 </li>
               )
             })

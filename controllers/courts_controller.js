@@ -7,7 +7,6 @@ const PlayerModel = require('../models/player.js')
 courtsRouter.get('/', async (req, res) => {
     const foundCourts = await CourtModel.find().lean()
     const foundPlayers = await PlayerModel.find().lean()
-    // console.log(foundCourts)
     res.render('index', {
         courts: foundCourts, 
         players: foundPlayers,
