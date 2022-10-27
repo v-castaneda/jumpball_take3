@@ -1,52 +1,52 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function New ({players}) {
+function New({ players }) {
   // confirm we are getting our court data in terminal
   console.log(players.name)
-    return (
-      <Default>
-        <h2>Add a new court</h2>
-        <form action="/court" method="POST">
+  return (
+    <Default>
+      <h2>Add a new court</h2>
+      <form action="/courts" method="POST">
 
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-          />
+        <label htmlFor="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+        />
 
-          <label htmlFor="address">Address</label>
-          <input
-            type="text"
-            name="Address123"
-            id="Address123"
-            required
-          />
-          
-          <label htmlFor="city">City</label>
-          <input
-            type="text"
-            name="city"
-            id="city"
-            required
-          />
+        <label htmlFor="address">Address</label>
+        <input
+          type="text"
+          name="address"
+          id="address"
+          required
+        />
 
-          <label htmlFor="image">Image</label>
-          <input
-            type="text"
-            name="image"
-            id="image"
-          />
+        <label htmlFor="city">City</label>
+        <input
+          type="text"
+          name="city"
+          id="city"
+          required
+        />
 
-          <br />
+        <label htmlFor="image">Image</label>
+        <input
+          type="text"
+          name="image"
+          id="image"
+        />
 
-          <input type="submit"/>
+        <br />
 
-        </form>
-      </Default>
-    )
+        <input type="submit" />
+
+      </form>
+    </Default>
+  )
 }
 
 module.exports = New

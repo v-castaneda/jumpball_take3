@@ -21,8 +21,8 @@ function Default(html) {
       <div className="wrapper">
         <header>
           <h1>JumpBall Meet Up</h1>
-          <nav id="sticky-nav">
-            <ul>
+          <nav id="nav">
+            <ul id="navUl">
                 <li><a href='/courts'>Home</a></li>
                 <li><a href='/courts/new'>Court+</a></li>
                 <li><a href='/players'>Player+</a></li>

@@ -43,10 +43,12 @@ courtsRouter.get('/:id', (req, res) => {
 courtsRouter.get('/:id/edit', (req, res) => {
     PlayerModel.find()
     .then(foundPlayers => {
-        Court.findById(req.params.id)
+        // console.log(foundPlayers)
+        CourtModel.findById(req.params.id)
         .then(foundCourt => {
+            // console.log(foundCourt)
             res.render('edit', {
-                court: foundCourt,
+                courts: foundCourt,
                 players: foundPlayers
             })
         })
@@ -64,6 +66,7 @@ courtsRouter.put('/:id', (req, res) => {
 
 // CREATE
 courtsRouter.post('/', (req, res) => {
+    console.log(req.body)
   if(!req.body.image) {
       req.body.image = undefined 
   }

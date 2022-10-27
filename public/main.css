@@ -1,5 +1,5 @@
 body {
-  background-color: whitesmoke;
+  background-color: coral;
 }
 
 .nobull {
@@ -13,14 +13,30 @@ img {
 }
 
 #nav {
-  position: sticky;
   top: 0.5em;
-  background-color: black;
+  border: 0.5em;
+  background-color: white;
+  text-align: center;
 }
 
-ul {
+#navUl {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+a {
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
