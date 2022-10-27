@@ -57,8 +57,8 @@ courtsRouter.get('/:id/edit', (req, res) => {
 // UPDATE
 courtsRouter.put('/:id', (req, res) => {
   CourtModel.findByIdAndUpdate(req.params.id, req.body, { new: true }) 
-    .then(updatedBread => {
-      console.log(updatedBread) 
+    .then(updatedCourt => {
+      console.log(updatedCourt) 
       res.redirect(`/courts/${req.params.id}`) 
     })
 })

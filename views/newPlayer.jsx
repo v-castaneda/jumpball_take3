@@ -6,11 +6,11 @@ function newPlayer({ players, event }) {
         value: null,
         days: [{ day1: 'Monday', day2: 'Tuesday', day3: 'Wednesday', day4: 'Thursday', day5: 'Friday', day6: 'Saturday', day7: 'Sunday' }]
     }
-    handleChange(event) {
-        this.setState({
-            value: Array.from(event.target.selectedOptions, item => item.value)
-        });
-    }
+    // handleChange(event) {
+    //     this.setState({
+    //         value: Array.from(event.target.selectedOptions, item => item.value)
+    //     });
+    // }
     return (
         <Default>
             <h2>Add new player</h2>
