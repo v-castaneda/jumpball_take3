@@ -1,17 +1,7 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-// function newPlayer({ players, event }) {
-//     state = {
-//         value: null,
-//         days: [{ day1: 'Monday', day2: 'Tuesday', day3: 'Wednesday', day4: 'Thursday', day5: 'Friday', day6: 'Saturday', day7: 'Sunday' }]
-//     }
-//     function handleChange(event) {
-//         this.setState({
-//             value: Array.from(event.target.selectedOptions, item => item.value)
-//         });
-//     }
-function newPlayer(){
+function newPlayer() {
     return (
         <Default>
             <h2>Add new player</h2>
@@ -23,13 +13,16 @@ function newPlayer(){
                     id='name'
                     required
                 />
+
                 <label htmlFor='bio'>Bio</label>
                 <input
                     type='text'
                     name='bio'
                 />
+
                 <label htmlFor='position'>
                     Position
+                    <br/>
                     <select>
                         <option value='Point Guard'>Point Guard</option>
                         <option value='Shooting Guard'>Shooting Guard</option>
@@ -38,19 +31,17 @@ function newPlayer(){
                         <option value='Center'>Center</option>
                     </select>
                 </label>
-                <label htmlFor='days'>
-                    Days Available
-                    {/* <select
-                        multiple
-                        onChange={handleChange}
-                        value={this.state.value}
-                    >
-                        {this.state.days.map(days => (
-                            <option value={days.pk}>{days.day1}</option>
-                        ))}
 
-                    </select> */}
+                <label htmlFor='gameDays'>
+                    Days Available
+                    <br/>
+                    <input
+                    type='text'
+                    name='gameDays'
+                    />
                 </label>
+
+                <input type="submit" />
 
             </form>
         </Default>

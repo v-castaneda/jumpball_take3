@@ -7,14 +7,13 @@ const { Schema } = mongoose
 const playerSchema = new Schema({
     name: {
         type: String,
-        required: true,
-        enum: ['Jesse', 'Joseph', 'Victor']
+        required: true
     }, 
     gameDays: {
-        type: Date,
-        required: true
+        type: String
     },
-    bio: String
+    bio: String, 
+    position: String
 }, { toJSON: { virtuals: true }})
 
 // virtuals 

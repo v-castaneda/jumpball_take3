@@ -21,6 +21,13 @@ playerRouter.get('/new', (req, res) => {
     })
 })
 
+// CREATE
+playerRouter.post('/', (req, res) => {
+    console.log(req.body)
+    PlayerModel.create(req.body)
+    res.redirect('/courts')
+})
+
 // show 
 playerRouter.get('/:id', (req, res) => {
     PlayerModel.findById(req.params.id)
