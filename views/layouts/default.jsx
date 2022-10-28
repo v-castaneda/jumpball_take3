@@ -25,7 +25,7 @@ function Default(html) {
             <ul id="navUl">
                 <li><a href='/courts'>Home</a></li>
                 <li><a href='/courts/new'>Court+</a></li>
-                <li><a href='/players'>Player+</a></li>
+                <li><a href='/players/new'>Player+</a></li>
             </ul>
         </nav>
         </header>

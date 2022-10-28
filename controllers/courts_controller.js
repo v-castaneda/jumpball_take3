@@ -7,7 +7,6 @@ const PlayerModel = require('../models/player.js')
 courtsRouter.get('/', async (req, res) => {
     const foundCourts = await CourtModel.find().lean()
     const foundPlayers = await PlayerModel.find().lean()
-    // console.log(foundCourts)
     res.render('index', {
         courts: foundCourts, 
         players: foundPlayers,
@@ -58,8 +57,8 @@ courtsRouter.get('/:id/edit', (req, res) => {
 // UPDATE
 courtsRouter.put('/:id', (req, res) => {
   CourtModel.findByIdAndUpdate(req.params.id, req.body, { new: true }) 
-    .then(updatedBread => {
-      console.log(updatedBread) 
+    .then(updatedCourt => {
+      console.log(updatedCourt) 
       res.redirect(`/courts/${req.params.id}`) 
     })
 })

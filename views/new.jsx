@@ -1,9 +1,8 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function New({ players }) {
+function New() {
   // confirm we are getting our court data in terminal
-  console.log(players.name)
   return (
     <Default>
       <h2>Add a new court</h2>

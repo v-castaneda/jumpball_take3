@@ -40,3 +40,9 @@ input[type=submit] {
   color: black;
   cursor: pointer;
 }
+
+button {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }

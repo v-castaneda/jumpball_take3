@@ -12,7 +12,7 @@ playerRouter.get('/', (req, res) => {
 })
 
 //new
-playerRouter.get('/newPlayer', (req, res) => {
+playerRouter.get('/new', (req, res) => {
     PlayerModel.find()
     .then(foundPlayers => {
         res.render('newPlayer', {
