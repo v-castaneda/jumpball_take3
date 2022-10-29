@@ -5,9 +5,9 @@ function Show({ player }) {
   return (
     <Default>
       <h3>{player.name}</h3>
-      <p>{player.name}, usually available to play {player.gameDays}. If only we didn't have to work.</p>
+      <p>{player.name} usually available to play {player.gameDays}.</p>
       <p>About {player.name}: {player.bio}</p>
-      <h3>Courts {player.name} has played at</h3>
+      {/* <h3>Courts {player.name} has played at</h3>
       <ul>
         {
           player.courts.map((court) => {
@@ -18,7 +18,7 @@ function Show({ player }) {
             )
           })
         }
-      </ul>
+      </ul> */}
       <form action={`/players/${player._id}?_method=DELETE`} method="POST">
         <input type="submit" value="DELETE" />
       </form>

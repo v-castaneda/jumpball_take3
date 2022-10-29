@@ -42,10 +42,8 @@ courtsRouter.get('/:id', (req, res) => {
 courtsRouter.get('/:id/edit', (req, res) => {
     PlayerModel.find()
     .then(foundPlayers => {
-        // console.log(foundPlayers)
         CourtModel.findById(req.params.id)
         .then(foundCourt => {
-            // console.log(foundCourt)
             res.render('edit', {
                 courts: foundCourt,
                 players: foundPlayers
@@ -58,14 +56,12 @@ courtsRouter.get('/:id/edit', (req, res) => {
 courtsRouter.put('/:id', (req, res) => {
   CourtModel.findByIdAndUpdate(req.params.id, req.body, { new: true }) 
     .then(updatedCourt => {
-      console.log(updatedCourt) 
       res.redirect(`/courts/${req.params.id}`) 
     })
 })
 
 // CREATE
 courtsRouter.post('/', (req, res) => {
-    console.log(req.body)
   if(!req.body.image) {
       req.body.image = undefined 
   }

@@ -2,9 +2,6 @@ const React = require('react')
 const Default = require('./layouts/Default')
 
 function Index ({courts, players, title})  {
-  // confirm we are getting our courts and players data in terminal
-  // {console.log(players)}
-  // {console.log(courts)}
   return (
     <Default title={title}>
 
