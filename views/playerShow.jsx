@@ -6,7 +6,7 @@ function Show({ player }) {
     <Default>
       <h3>{player.name}</h3>
       <p>{player.name}, usually available to play {player.gameDays}. If only we didn't have to work.</p>
-      <p>About {player.name}: {player.statistics}</p>
+      <p>About {player.name}: {player.bio}</p>
       <h3>Courts {player.name} has played at</h3>
       <ul>
         {
