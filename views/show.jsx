@@ -2,8 +2,6 @@ const React = require('react')
 const Default = require('./layouts/Default')
 
 function Show({ court }) {
-  // confirm we are getting our court data in terminal
-  // console.log(court.name)
   return (
     <Default>
       <h3>{court.name}</h3>

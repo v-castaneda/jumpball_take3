@@ -2,7 +2,6 @@ const React = require('react')
 const Default = require('./layouts/Default')
 
 function Edit({ courts, players }) {
-  console.log(courts)
   return (
     <Default>
       <h2>Edit</h2>
