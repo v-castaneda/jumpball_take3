@@ -1,9 +1,9 @@
 body {
-    background-color: coral;
+  background-color: coral;
 }
 
 .nobull {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 img {
@@ -32,7 +32,7 @@ a {
 
 h1 {
   text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 input[type=submit] {
@@ -42,7 +42,7 @@ input[type=submit] {
 }
 
 button {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-}
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */

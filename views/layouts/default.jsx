@@ -5,7 +5,7 @@ function Default(html) {
     <html>
     <head>
       <title>{html.title || 'Default'}</title>
-      <link rel="stylesheet" href="/css/main.css" />
+      <link rel="stylesheet" href="/scss/main.css" />
     </head>
     <body>
       <div className="wrapper">
