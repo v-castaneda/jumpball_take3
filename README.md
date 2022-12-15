@@ -22,6 +22,7 @@ _Workflow_:
 - Trello devops
 
 ## Next Steps
+- Adding SCSS
 - Add search functionality on nearby pickup games
 - Include addition of geolocation API
 - Incorporate map rendering 
