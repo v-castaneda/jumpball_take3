@@ -1,5 +1,6 @@
 body {
-  background-color: coral;
+  background-color: white;
+  font-family: Trebuchet MS, Arial, sans-serif;
 }
 
 .nobull {
@@ -13,13 +14,10 @@ img {
 }
 
 #nav {
-  top: 0.5em;
-  border: 0.5em;
+  border: 2px solid black;
   background-color: white;
-  text-align: center;
 }
-
-#navUl {
+#nav #navUl {
   list-style: none;
   display: flex;
   flex-direction: row;

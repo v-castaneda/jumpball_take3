@@ -1,5 +1,10 @@
+// import config and utilities partials
+@import "config";
+@import "utilities";
+
 body {
-    background-color: coral;
+    background-color: $color-primary;
+    font-family: $font-stack;
 }
 
 .nobull {
@@ -13,18 +18,17 @@ img {
 }
 
 #nav {
-  top: 0.5em;
-  border: 0.5em;
-  background-color: white;
-  text-align: center;
+  border: 2px solid $color-secondary;
+  background-color: $color-primary;
+
+  #navUl {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
-#navUl {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
 
 a {
   color: black;
@@ -32,17 +36,17 @@ a {
 
 h1 {
   text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: $font-stack-header;
 }
 
 input[type=submit] {
-  background-color: white;
-  color: black;
+  background-color: $color-primary;
+  color: $color-secondary;
   cursor: pointer;
 }
 
 button {
-    background-color: white;
-    color: black;
+    background-color: $color-primary;
+    color: $color-secondary;
     cursor: pointer;
 }
